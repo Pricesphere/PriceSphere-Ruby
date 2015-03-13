@@ -1,5 +1,6 @@
-require "pricesphere/version"
-
+require 'pricesphere/version'
+require 'pricesphere/error'
+require 'pricesphere/base'
+require 'pricesphere/product'
 module Pricesphere
-  # Your code goes here...
 end
