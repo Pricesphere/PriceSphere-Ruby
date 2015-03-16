@@ -7,8 +7,23 @@ module Pricesphere
 
     def with_attributes(attributes = {})
       return {} if attributes == {}
+      page = 1
+      last_page = false
+      Enumerator.new do |yielder|
+        loop do
+          raise StopIteration if last_page
+          result = get(attributes.merge(page: page))
 
-      get(attributes)
+          if page == result['meta']['pages'].to_i
+            last_page = true
+          end
+          page += 1
+          result['products'].each do |product|
+            yielder.yield product
+          end
+        end
+
+      end
     end
 
     private

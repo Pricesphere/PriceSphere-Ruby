@@ -19,7 +19,7 @@ module Pricesphere
         request_params += "&#{CGI.escape(name.to_s)}=#{CGI.escape(value.to_s)}"
       end
       request_params.gsub!(/^&/, '')
-      base_url = "https://www.pricesphere.com/api/#{@version}"
+      base_url = "#{Pricesphere.base_url}/api/#{@version}"
       request_url = "#{base_url}/#{endpoint}?#{request_params}&token=#{@api_key}"
 
       response = Net::HTTP.get(URI request_url)
