@@ -2,7 +2,7 @@ module Pricesphere
   class Product < Base
     def search(term = '')
       return {} if term == ''
-      with_attributes( search: term )
+      with_attributes( { :search  => term } )
     end
 
     def with_attributes(attributes = {})
@@ -12,7 +12,7 @@ module Pricesphere
       Enumerator.new do |yielder|
         loop do
           raise StopIteration if last_page
-          result = get(attributes.merge(page: page))
+          result = get(attributes.merge({:page => page}))
 
           if page == result['meta']['pages'].to_i
             last_page = true

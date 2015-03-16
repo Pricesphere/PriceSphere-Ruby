@@ -11,12 +11,12 @@ module Pricesphere
       request = Net::HTTP::Post.new("/api/#{@version}/watches")
       request.add_field('Content-Type', 'application/json')
       request.body = {
-        watch: {
-          product_id: product_id,
-          webhook_path: webhook_path,
-          webhook_attributes: callback_params.to_json
+        :watch => {
+          :product_id => product_id,
+          :webhook_path => webhook_path,
+          :webhook_attributes => callback_params.to_json
         },
-        token: @api_key
+        :token => @api_key
       }.to_json
 
       response = http.request(request)
