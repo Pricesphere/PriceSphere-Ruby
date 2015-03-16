@@ -1,6 +1,6 @@
 # Pricesphere
 
-TODO: Write a gem description
+Pricesphere is a Rubygem to ease integration with PriceSphere's product pricing API.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For examples of how to use PriceSphere, please check out the examples in the examples directory. We have an example of querying for products and registering a watch (or Webhook). If you have suggestions for other examples or things we can support, add an issue!
 
 ## Contributing
 

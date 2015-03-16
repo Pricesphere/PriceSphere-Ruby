@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["chmacnaughton@gmail.com"]
   spec.summary       = %q{Pricesphere is a Gem to interact with PriceSphere.com's API}
   spec.description   = %q{Pricesphere is a Gem to interact with PriceSphere.com's API}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Pricesphere/PriceSphere-Ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
