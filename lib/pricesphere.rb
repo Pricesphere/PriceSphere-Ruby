@@ -2,6 +2,7 @@ require 'pricesphere/version'
 require 'pricesphere/error'
 require 'pricesphere/base'
 require 'pricesphere/product'
+require 'pricesphere/watch'
 module Pricesphere
 
   def self.base_url
